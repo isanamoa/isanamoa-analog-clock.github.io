@@ -3,14 +3,14 @@
 const clockFunc = () => {
 
     const myDate = new Date()
-    const hour = myDate.getHours(),
+    const seconds = myDate.getSeconds(),
         minute = myDate.getMinutes(),
-        seconds = myDate.getSeconds();
+        hour = myDate.getHours();
 
-    console.log(hour, minute, seconds);
+    //console.log(hour, minute, seconds);
     // To get rotation angle, calc the number of degree/per second, per minute and per hour
     const secondsAng = seconds * 6,
-        minuteAng = minute * 6,
+        minuteAng = minute * 6 + seconds/60,
         //Alt A
         hourAng = hour * 30 + (minute / 2);
         // Alt B
