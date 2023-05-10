@@ -22,6 +22,6 @@ const clockFunc = () => {
     document.getElementById('seconds').setAttribute('transform', `rotate(${secondsAng} 244, 251)`);
 
 }
-clockFunc()
+//clockFunc()
 // Update function for updating the clock handles per second
 setInterval(() => clockFunc(), 1000);
